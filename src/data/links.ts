@@ -34,6 +34,7 @@ export interface DeploymentLauncher {
 }
 
 const SHOP = "https://fyp-web-code-deployment.vercel.app";
+const WEBSITE = `${SHOP}/messages`;
 const DASHBOARD = `${SHOP}/login?pick=1`;
 const FLUTTER_WEB = "https://app-deployment-flutter-smart-fitao.vercel.app/";
 const STUDIO = "https://3d-studio-deploymentt.vercel.app/ladies_try_on/";
@@ -43,7 +44,7 @@ export const DEPLOYMENT_LAUNCHERS: DeploymentLauncher[] = [
     id: "shop",
     label: "Shop Website",
     subtitle: "Marketplace · size finder · 2D try-on",
-    liveUrl: `${SHOP}/`,
+    liveUrl: WEBSITE,
     vercelProjectUrl:
       "https://vercel.com/nauman-irshads-projects/fyp-web-code-deployment",
     gradient: "from-brand-500 to-brand-600",
@@ -141,14 +142,19 @@ export const PORTFOLIO_SECTIONS: PortfolioSection[] = [
     screenshotHint: "Add PNG/JPG files to public/screenshots/website/",
     primaryAction: {
       label: "Open live website",
-      url: `${SHOP}/`,
+      url: WEBSITE,
       external: true,
     },
     links: [
       {
+        label: "Messages / marketplace",
+        url: WEBSITE,
+        description: "Main shop website — messages & marketplace",
+      },
+      {
         label: "Shop home",
         url: `${SHOP}/`,
-        description: "Main storefront & 3D landing",
+        description: "Landing page & 3D hero",
       },
       {
         label: "AI Size Finder",
