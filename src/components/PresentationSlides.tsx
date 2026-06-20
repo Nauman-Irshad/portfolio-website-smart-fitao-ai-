@@ -4,6 +4,7 @@ const SLIDES = [
   { id: 3, src: "/slides/3.png", alt: "Smart Fitao AI — slide 3" },
   { id: 4, src: "/slides/4.png", alt: "Smart Fitao AI — slide 4" },
   { id: 5, src: "/slides/5.png", alt: "Smart Fitao AI — slide 5" },
+  { id: 6, src: "/slides/6.jpeg", alt: "SmartFitao — End-to-End Order Tracking Flow" },
 ] as const;
 
 /** Same frame for every slide — images scale inside with object-contain. */

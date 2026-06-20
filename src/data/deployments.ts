@@ -42,7 +42,6 @@ export const DEPLOYMENT_CATEGORY_META: Record<
 };
 
 const SHOP = "https://fyp-web-code-deployment.vercel.app";
-const WEBSITE = `${SHOP}/messages`;
 const DASHBOARD = `${SHOP}/login?pick=1`;
 const STUDIO = "https://3d-studio-deploymentt.vercel.app/ladies_try_on/";
 const SIZE_API = "https://fyp-backend-hi10.onrender.com";
@@ -54,14 +53,6 @@ const CV_VERCEL =
 
 export const ALL_DEPLOYMENTS: DeploymentEntry[] = [
   // —— Vercel ——
-  {
-    id: "v-shop",
-    category: "vercel",
-    label: "Shop website (messages)",
-    url: WEBSITE,
-    description: "Main React marketplace — messages page",
-    healthUrl: WEBSITE,
-  },
   {
     id: "v-shop-home",
     category: "vercel",
@@ -89,9 +80,17 @@ export const ALL_DEPLOYMENTS: DeploymentEntry[] = [
   {
     id: "v-dashboard",
     category: "vercel",
-    label: "Tailor & Seller Dashboard",
+    label: "Seller Dashboard (live)",
+    url: "https://smart-fitao-dashboard.vercel.app/seller",
+    description: "Seller products · orders · income graphs",
+    healthUrl: "https://smart-fitao-dashboard.vercel.app/",
+  },
+  {
+    id: "v-dashboard-login",
+    category: "vercel",
+    label: "Tailor & Seller login (shop site)",
     url: DASHBOARD,
-    description: "Role picker on shop site — tailor/seller login",
+    description: "Role picker on shop website",
     healthUrl: `${SHOP}/`,
   },
   {

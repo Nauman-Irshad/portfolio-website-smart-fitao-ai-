@@ -34,31 +34,23 @@ export interface DeploymentLauncher {
 }
 
 const SHOP = "https://fyp-web-code-deployment.vercel.app";
-const WEBSITE = `${SHOP}/messages`;
+const WEBSITE = `${SHOP}/`;
+const SELLER_DASHBOARD = "https://smart-fitao-dashboard.vercel.app/seller";
 const DASHBOARD = `${SHOP}/login?pick=1`;
 const FLUTTER_WEB = "https://app-deployment-flutter-smart-fitao.vercel.app/";
-const STUDIO = "https://3d-studio-deploymentt.vercel.app/ladies_try_on/";
+const STUDIO_HOME = "https://3d-studio-deploymentt.vercel.app/";
+const STUDIO = `${STUDIO_HOME}ladies_try_on/`;
 
 export const DEPLOYMENT_LAUNCHERS: DeploymentLauncher[] = [
   {
     id: "shop",
     label: "Shop Website",
-    subtitle: "Marketplace · size finder · 2D try-on",
+    subtitle: "Marketplace · 3D hero · size finder",
     liveUrl: WEBSITE,
     vercelProjectUrl:
       "https://vercel.com/nauman-irshads-projects/fyp-web-code-deployment",
     gradient: "from-brand-500 to-brand-600",
     border: "border-brand-200",
-  },
-  {
-    id: "dashboard",
-    label: "Tailor Dashboard",
-    subtitle: "Seller & tailor login · orders",
-    liveUrl: DASHBOARD,
-    vercelProjectUrl:
-      "https://vercel.com/nauman-irshads-projects/fyp-web-code-deployment",
-    gradient: "from-amber-500 to-orange-600",
-    border: "border-amber-200",
   },
   {
     id: "flutter-web",
@@ -71,10 +63,20 @@ export const DEPLOYMENT_LAUNCHERS: DeploymentLauncher[] = [
     border: "border-indigo-200",
   },
   {
+    id: "dashboard",
+    label: "Seller Dashboard",
+    subtitle: "Add products · orders · income",
+    liveUrl: SELLER_DASHBOARD,
+    vercelProjectUrl:
+      "https://vercel.com/nauman-irshads-projects/smart-fitao-dashboard",
+    gradient: "from-amber-500 to-orange-600",
+    border: "border-amber-200",
+  },
+  {
     id: "studio",
     label: "3D Try-On Studio",
     subtitle: "Virtual kurta · Three.js studio",
-    liveUrl: STUDIO,
+    liveUrl: STUDIO_HOME,
     vercelProjectUrl:
       "https://vercel.com/nauman-irshads-projects/3d-studio-deploymentt",
     gradient: "from-teal-500 to-cyan-600",
@@ -147,14 +149,14 @@ export const PORTFOLIO_SECTIONS: PortfolioSection[] = [
     },
     links: [
       {
-        label: "Messages / marketplace",
+        label: "Shop website (home)",
         url: WEBSITE,
-        description: "Main shop website — messages & marketplace",
+        description: "Main marketplace — landing & 3D hero",
       },
       {
-        label: "Shop home",
-        url: `${SHOP}/`,
-        description: "Landing page & 3D hero",
+        label: "Messages / marketplace",
+        url: `${SHOP}/messages`,
+        description: "Customer messages & marketplace",
       },
       {
         label: "AI Size Finder",
@@ -242,15 +244,20 @@ export const PORTFOLIO_SECTIONS: PortfolioSection[] = [
     screenshotFolder: "/screenshots/dashboards",
     screenshotHint: "Add dashboard screenshots to public/screenshots/dashboards/",
     primaryAction: {
-      label: "Open dashboard login",
-      url: DASHBOARD,
+      label: "Open seller dashboard",
+      url: SELLER_DASHBOARD,
       external: true,
     },
     links: [
       {
-        label: "Role picker (Tailor / Seller)",
+        label: "Seller dashboard (live)",
+        url: SELLER_DASHBOARD,
+        description: "Add products · track orders · income",
+      },
+      {
+        label: "Role picker (shop site)",
         url: DASHBOARD,
-        description: "Choose dashboard role — live on shop site",
+        description: "Tailor / seller login on shop website",
       },
       {
         label: "Shop website",
@@ -270,19 +277,19 @@ export const PORTFOLIO_SECTIONS: PortfolioSection[] = [
     screenshotHint: "Add studio screenshots to public/screenshots/studio/",
     primaryAction: {
       label: "Open 3D Studio",
-      url: STUDIO,
+      url: STUDIO_HOME,
       external: true,
     },
     links: [
       {
+        label: "3D Studio home",
+        url: STUDIO_HOME,
+        description: "Studio landing page",
+      },
+      {
         label: "Ladies Kurti Try-On (live)",
         url: STUDIO,
         description: "TryKurti virtual kurta try-on studio",
-      },
-      {
-        label: "3D Studio home",
-        url: "https://3d-studio-deploymentt.vercel.app/",
-        description: "Studio landing page",
       },
       {
         label: "Size Finder → Studio",
